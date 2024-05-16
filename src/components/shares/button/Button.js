@@ -1,15 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Arrow } from '/public/icons/arrow'
 
 export const Button = (props) => {
     let custom, arrowCust, size;
 
     if (props.type === "small") {
-        custom = "bg-blue-2 medium-16 text-white py-2 px-4"
+        custom = "bg-blue-2 medium-16 text-white py-2 px-3"
         arrowCust = "fill-white"
         size = "w-10"
     } else if (props.type === "small-secondary") {
-        custom = "bg-transparent text-blue-2 medium-16 py-2 px-4 border border-blue-2"
+        custom = "bg-transparent text-blue-2 medium-16 py-2 px-3 border border-blue-2"
         arrowCust = "fill-blue-2"
         size = "w-10"
     } else if (props.type === "medium") {
@@ -44,3 +45,16 @@ export const Button = (props) => {
         </button>
     );
 }
+
+Button.propTypes = {
+    type: PropTypes.oneOf([
+        "small",
+        "small-secondary",
+        "medium",
+        "medium-secondary",
+        "large",
+        "large-secondary",
+    ]),
+    onClick: PropTypes.func,
+    title: PropTypes.string.isRequired,
+};

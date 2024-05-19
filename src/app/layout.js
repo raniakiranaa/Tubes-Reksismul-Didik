@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Footer } from '@/components/shares/nav'
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +13,7 @@ export default function RootLayout({ children }) {
         <main className='relative overflow-hidden bg_dashboard flex-1'>
           {children}
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

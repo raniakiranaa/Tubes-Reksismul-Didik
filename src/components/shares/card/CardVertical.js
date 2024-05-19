@@ -10,12 +10,11 @@ export const CardVertical = (props) => {
   return (
     <div className={`flex w-full max-w-lg mx-auto mb-4 rounded-2xl shadow-md ${isLink ? 'hover:shadow-lg' : ''} cursor-pointer`}>
       {isLink ? (
-        <Link href={props.linkPage} className="w-full h-full">
-          <div className="grid grid-cols-3 w-full h-full" style={{ width: '596px', height: '213px' }}>
+        <Link href={props.linkPage}  className="grid grid-cols-3 w-full h-full" style={{ width: '596px', height: '213px' }}>
             <div className="col-span-1">
               <Image src={props.image} className="rounded-lg h-full" alt="pic"/>
             </div>
-            <div className="col-span-2 flex-grow flex flex-col justify-center p-8">
+            <div className="col-span-2 flex-grow flex flex-col justify-center p-6">
               <h2 className="bold-24 text-xl mb-2">
                 {props.title}
               </h2>
@@ -23,7 +22,6 @@ export const CardVertical = (props) => {
                 {props.description}
               </p>
             </div>
-          </div>
         </Link>
       ) : (
         <div className="grid grid-cols-3 w-full h-full" style={{ width: '596px', height: '213px' }}>
@@ -37,11 +35,15 @@ export const CardVertical = (props) => {
             <p className="text-sub-text regular-14 text-base" style={{ textAlign: "justify" }}>
               {props.description}
             </p>
+            <p className="semibold-14 text-positive-2">
+                Score: 100%
+
+            </p>
             <div className="flex justify-between mt-4">
               <Button type="small" title="Test" />
-            <div className="ml-1">
+              <div className="ml-1">
                 <Button type="small-secondary" title="Evaluate" />
-            </div>
+              </div>
             </div>
           </div>
         </div>

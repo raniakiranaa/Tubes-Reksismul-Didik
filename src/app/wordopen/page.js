@@ -1,4 +1,3 @@
-import { CardVertical } from "@/components/shares/card"
 import word from '/public/images/word/one.png'
 import Image from 'next/image';
 import { Button } from '@/components/shares/button'
@@ -16,7 +15,7 @@ export default function App() {
                     Master your pronunication with a little wordplay! Immerse yourself in a captivating journey where you'll hear various speakers express a myriad of synonyms for captivating images. Dive into the rich tapestry of language and let your pronunciation skills soar with Wordplay!"
                     </div>
                     <div className="flex justify-end pt-16 mr-12">
-                        <Button title="Let's Go!" type="medium-secondary"/>
+                        <Button linkPage="/word" title="Let's Go!" type="medium-secondary"/>
                     </div>
                 </div>
             </div>

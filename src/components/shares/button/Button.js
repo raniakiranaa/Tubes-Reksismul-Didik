@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 import { Arrow } from '/public/icons/arrow'
 
 export const Button = (props) => {
@@ -32,17 +33,25 @@ export const Button = (props) => {
     }
 
     return (
-        <button 
-            className={`flex items-center justify-center ${custom} rounded-full hover:shadow-lg`}
-            onClick={ props.onClick }
-        >
-            <div className='flex flex-row ml-6'>
-                { props.title }
-                <div className={`pl-4 ${size}`}>
-                    <Arrow fillClassName={arrowCust} />
-                </div>
+        <Link href={props.linkPage}>
+            <div className={`flex items-center justify-center ${custom} rounded-full hover:shadow-lg`}>
+                {props.title === 'Back' ? (
+                    <div className="flex flex-row items-center mr-6">
+                        <div className={`pr-4 ${size}`}>
+                            <Arrow fillClassName={arrowCust} flipHorizontal={ true }/>
+                        </div>
+                        {props.title}
+                    </div>
+                ): (
+                    <div className='flex flex-row items-center ml-6'>
+                        {props.title}
+                        <div className={`pl-4 ${size}`}>
+                            <Arrow fillClassName={arrowCust} flipHorizontal={ false }/>
+                        </div>
+                    </div>
+                )} 
             </div>
-        </button>
+        </Link>
     );
 }
 
@@ -55,6 +64,6 @@ Button.propTypes = {
         "large",
         "large-secondary",
     ]),
-    onClick: PropTypes.func,
+    linkPage: PropTypes.string,
     title: PropTypes.string.isRequired,
 };

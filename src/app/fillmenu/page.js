@@ -12,7 +12,7 @@ export default function App() {
                 </div>
                 <div className="w-1/2 flex justify-center flex-col">
                     <div className="text-sub-text regular-18 pt-4 text-justify" style={{ maxWidth: '464px' }}>
-                    This engaging exercise challenges you to think critically and expand your vocabulary by identifying and filling in missing words. Perfect for learners of all levels, this activity not only improves your language skills but also boosts your comprehension and spelling abilities. Dive into our interactive passages, complete the words, and watch your language proficiency soar. Ready to test your skills? Let’s get started and fill in the blanks!"
+                    This engaging exercise challenges you to think critically and expand your vocabulary by identifying and filling in missing words. Perfect for learners of all levels, this activity not only improves your language skills but also boosts your comprehension and spelling abilities. Dive into our interactive passages, complete the words, and watch your language proficiency soar. Ready to test your skills? Let’s get started and fill in the blanks!
                     </div>
                     <div className="flex justify-end pt-16 mr-12">
                         <Button linkPage="/fill" title="Let's Go!" type="medium-secondary"/>

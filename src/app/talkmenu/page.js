@@ -11,11 +11,11 @@ export default function app() {
             </div>
             <div className="flex flex-row pt-16 justify-center">
                 <CardVertical linkPage="/wordopen" image={ word } title="Wordplay 1.0" description="Master your pronunciation with a little wordplay..."/>
-                <CardVertical linkPage="/wordtwo" image={ word } title="Wordplay 2.0" description="Master your pronunciation with a little wordplay, BUT HARDER!!!"/>
+                <CardVertical linkPage="/wordopen" image={ word } title="Wordplay 2.0" description="Master your pronunciation with a little wordplay, BUT HARDER!!!"/>
             </div>
             <div className="flex flex-row pt-16 justify-center">
-                <CardVertical linkPage="/speakone" image={ speak } title="Speak UP 1.0" description="Perfect your conversational abilities for any situation..."/>
-                <CardVertical linkPage="/speaktwo" image={ speak } title="Speak UP 2.0" description="Perfect your conversational abilities for any situation, BUT HARDER!!!"/>
+                <CardVertical linkPage="/speakopen" image={ speak } title="Speak UP 1.0" description="Perfect your conversational abilities for any situation..."/>
+                <CardVertical linkPage="/speakopen" image={ speak } title="Speak UP 2.0" description="Perfect your conversational abilities for any situation, BUT HARDER!!!"/>
             </div>
         </div>
     )

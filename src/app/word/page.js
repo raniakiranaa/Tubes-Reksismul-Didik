@@ -13,10 +13,10 @@ export default function App() {
 
     return (
         <div className="flex min-h-screen flex-col p-24">
+            <div className="text-main-text semibold-64 pb-8">Wordplay 1.0 - Animals</div>
             <div className="w-full bg-body-text rounded-full h-3 dark:bg-gray-700">
                 <div className="bg-positive-2 h-3 rounded-full" style={{ width: '20%' }}></div>
             </div>
-            <div className="text-main-text semibold-64 pt-8">Wordplay 1.0 - Animals</div>
             <div className="text-main-text medium-32 pt-4">What is this?</div>
             <div className="flex flex-row ml-32">
                 <div>
@@ -70,8 +70,8 @@ export default function App() {
                 </div>
             </div>
             <div className="flex flex-row justify-center space-x-4">
-                <Button linkPage="/word" title="Back" type="medium-secondary"/>
-                <Button linkPage="/word" title="Next" type="medium"/>
+                <Button title="Back" type="medium-secondary"/>
+                <Button title="Next" type="medium"/>
             </div>
         </div>
     );

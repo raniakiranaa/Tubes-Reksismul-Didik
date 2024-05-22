@@ -35,7 +35,7 @@ export const Button = (props) => {
     return (
         <Link href={props.linkPage}>
             <div className={`flex items-center justify-center ${custom} rounded-full hover:shadow-lg`}>
-                {props.title === 'Back' ? (
+                {props.title === 'Back' || props.title === 'Decline' ? (
                     <div className="flex flex-row items-center mr-6">
                         <div className={`pr-4 ${size}`}>
                             <Arrow fillClassName={arrowCust} flipHorizontal={ true }/>

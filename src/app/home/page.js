@@ -10,8 +10,8 @@ export default function app() {
                 <p className="text-sub-text regular-18 pt-4 text-justify">Ready to dive into today's session? Let’s explore Bahasa Indonesia together and unlock new possibilities! ⭐️</p>
             </div>
             <div className="flex flex-row pt-16 justify-center space-x-32">
-                    <CardStack linkPage="/talkmenu" image={modul} description="Interactive learning with speech recognition & peer exchange."/>
-                    <CardStack linkPage="/speechmenu" image={tv} description="Real-time practice with other user speakers via video conferencing."/>
+                    <CardStack linkPage="/didiktvmenu" image={tv} title="Didik TV" description="Interactive learning with speech recognition & peer exchange."/>
+                    <CardStack linkPage="/speechmenu" image={modul} title="Modul Didik" description="Real-time practice with other user speakers via video conferencing."/>
             </div>
         </div>
     )

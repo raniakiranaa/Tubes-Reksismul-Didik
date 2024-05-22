@@ -9,7 +9,7 @@ export default function app() {
                 <div className="text-main-text text-left semibold-64">Terms and Conditions</div>
                 <p className="text-sub-text regular-18 pt-4 text-justify">Before having some fun learning with new friends, do read the terms and conditions of DidikTV below. If you agree, we will then proceed to DidikTV!</p>
             </div>
-            <div className="flex flex-row pt-16 justify-center">
+            <div className="flex flex-row pt-8 justify-center">
                 <CardTnC />
             </div>
         </div>

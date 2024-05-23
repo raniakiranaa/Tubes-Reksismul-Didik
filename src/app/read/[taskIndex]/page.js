@@ -93,13 +93,18 @@ const ReadAndSelect = () => {
                 ))}
             </div>
             <div className="flex justify-between mt-8 w-full">
-            <Button linkPage="#" onClick={checkWords} title="Check" type="medium-secondary" />
+                <Button linkPage="#" onClick={checkWords} title="Check" type="medium-secondary" />
                 <div className="flex space-x-4">
                     {taskIndex > 0 && (
                         <Button linkPage={`/read/${taskIndex - 1}`} title="Back" type="medium-secondary" />
                     )}
                     {taskIndex < tasks.length - 1 && (
                         <Button linkPage={`/read/${taskIndex + 1}`} title="Next" type="medium" />
+                    )}
+                    {taskIndex === tasks.length - 1 && (
+                        <>
+                            <Button linkPage="/readresult" title="Finish" type="medium" />
+                        </>
                     )}
                 </div>
             </div>

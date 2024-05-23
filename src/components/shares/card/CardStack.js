@@ -10,7 +10,7 @@ export const CardStack = (props) => {
             <div className="rounded-xl overflow-hidden transition-shadow duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"  style={{ width: '350px', height: '443px' }}>
                 <Image src={props.image} className="w-full" alt="pic" layout="fixed"/>
                 <div className="px-6 pt-8 pb-12">
-                    <div className="bold-24 text-xl mb-2">
+                    <div className="bold-24 text-xl mb-4 text-center">
                         { props.title }
                     </div>
                     <p className="text-sub-text regular-14 text-base" style={{ textAlign: "justify" }}>

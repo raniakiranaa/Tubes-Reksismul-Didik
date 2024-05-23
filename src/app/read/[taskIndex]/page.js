@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { Button } from '@/components/shares/button';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ReadAndSelect = () => {
     const params = useParams();
+    const router = useRouter();
     const taskIndex = parseInt(params.taskIndex, 10);
 
     const [tasks, setTasks] = useState([]);
@@ -67,6 +68,15 @@ const ReadAndSelect = () => {
         }
     };
 
+    const handleNextClick = async () => {
+        await checkWords();
+        if (taskIndex < tasks.length - 1) {
+            window.location.href = `/read/${taskIndex + 1}`;
+        } else {
+            window.location.href = `/readresult`;
+        }
+    };
+
     if (tasks.length === 0 || isNaN(taskIndex)) return <div>Loading...</div>;
 
     const currentTask = tasks[taskIndex];
@@ -98,12 +108,11 @@ const ReadAndSelect = () => {
                     {taskIndex > 0 && (
                         <Button linkPage={`/read/${taskIndex - 1}`} title="Back" type="medium-secondary" />
                     )}
-                    {taskIndex < tasks.length - 1 && (
-                        <Button linkPage={`/read/${taskIndex + 1}`} title="Next" type="medium" />
-                    )}
-                    {taskIndex === tasks.length - 1 && (
+                    {taskIndex < tasks.length - 1 ? (
+                        <Button linkPage="#" onClick={handleNextClick} title="Next" type="medium" />
+                    ) : (
                         <>
-                            <Button linkPage="/readresult" title="Finish" type="medium" />
+                            <Button linkPage="#" onClick={handleNextClick} title="Finish" type="medium" />
                         </>
                     )}
                 </div>

@@ -15,7 +15,7 @@ export default function App() {
                     This interactive activity challenges you to read through a series of words and identify which ones are genuine Indonesian terms. Perfect for learners aiming to deepen their understanding of the language, this exercise not only improves your vocabulary but also hones your ability to discern authentic words. Dive into the list, make your selections, and boost your language skills with Read and Select. Ready to test your knowledge? Let's begin and find the real Indonesian words!
                     </div>
                     <div className="flex justify-end pt-16 mr-12">
-                        <Button linkPage="/read" title="Let's Go!" type="medium-secondary"/>
+                        <Button linkPage="/read/0" title="Let's Go!" type="medium-secondary"/>
                     </div>
                 </div>
             </div>

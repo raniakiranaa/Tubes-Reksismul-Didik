@@ -1,5 +1,5 @@
 import Image from "next/image";
-import tvmenu from "didiktv/menu"
+// import tvmenu from "didiktv/menu"
 
 export default function Home() {
   return (

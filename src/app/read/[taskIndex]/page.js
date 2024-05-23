@@ -6,7 +6,6 @@ import { Button } from '@/components/shares/button';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
 const ReadAndSelect = () => {
     const params = useParams();
     const taskIndex = parseInt(params.taskIndex, 10);
@@ -41,41 +40,30 @@ const ReadAndSelect = () => {
         );
     };
 
-    const handleCheckClick = () => {
-        fetch('http://127.0.0.1:8000/api/check', {
+    const checkWords = async () => {
+        const response = await fetch('http://127.0.0.1:8000/api/check', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ taskIndex, selectedWords })
-        })
-            .then(response => response.json())
-            .then(data => {
-                setResult(data);
-                showToast(data);
-            })
-            .catch(error => console.error('Error checking words:', error));
+        });
+        if (response.ok) {
+            const data = await response.json();
+            setResult(data);
+            showToast(data);
+        } else {
+            toast.error("Failed to check words.");
+        }
     };
 
     const showToast = (data) => {
         if (data.allCorrect) {
-            toast.success('You are correct! You guessed all words correctly.', {
-                className: 'toast-success',
+            toast.success("You are correct! You guessed all words correctly!", {
+                position: "top-center",
             });
         } else {
             toast.error(`Almost there! You got ${data.correctCount} out of ${tasks[taskIndex].correct.length} correct.`, {
-                className: 'toast-error',
+                position: "top-center",
             });
-        }
-    };
-
-    const handleNextClick = () => {
-        if (taskIndex < tasks.length - 1) {
-            window.location.href = `/read/${taskIndex + 1}`;
-        }
-    };
-
-    const handleBackClick = () => {
-        if (taskIndex > 0) {
-            window.location.href = `/read/${taskIndex - 1}`;
         }
     };
 
@@ -105,7 +93,7 @@ const ReadAndSelect = () => {
                 ))}
             </div>
             <div className="flex justify-between mt-8 w-full">
-                <Button linkPage="#" onClick={handleCheckClick} title="Check" type="medium-secondary" />
+            <Button linkPage="#" onClick={checkWords} title="Check" type="medium-secondary" />
                 <div className="flex space-x-4">
                     {taskIndex > 0 && (
                         <Button linkPage={`/read/${taskIndex - 1}`} title="Back" type="medium-secondary" />

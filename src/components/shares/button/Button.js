@@ -32,9 +32,15 @@ export const Button = (props) => {
         size = "w-16"
     }
 
+    const linkProps = {
+        href: props.linkPage,
+        target: props.openInNewTab ? '_blank' : '_self',
+        onClick: props.onClick
+    };
+
     return (
-        <Link href={props.linkPage}>
-            <div className={`flex items-center justify-center ${custom} rounded-full hover:shadow-lg`} onClick={props.onClick}>
+        <Link {...linkProps}>
+            <div className={`flex items-center justify-center ${custom} rounded-full hover:shadow-lg`}>
                 {props.title === 'Back' || props.title === 'Decline' ? (
                     <div className="flex flex-row items-center mr-6">
                         <div className={`pr-4 ${size}`}>
@@ -67,4 +73,5 @@ Button.propTypes = {
     linkPage: PropTypes.string,
     title: PropTypes.string.isRequired,
     onClick: PropTypes.func, // Add this line to handle the onClick prop
+    openInNewTab: PropTypes.bool, // New prop to control whether to open in a new tab or not
 };

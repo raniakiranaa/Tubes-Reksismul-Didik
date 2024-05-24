@@ -1,6 +1,9 @@
-import menuicon from '/public/images/didiktv/menu.PNG'
+import React from 'react';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
-import { Button } from '@/components/shares/button'
+import { Button } from '@/components/shares/button'; // Adjust the import path if needed
+
+import menuicon from '/public/images/didiktv/menu.PNG';
 
 export default function App() {
     return (
@@ -14,8 +17,9 @@ export default function App() {
                     <div className="text-sub-text regular-18 pt-4 text-justify" style={{ maxWidth: '464px' }}>
                     Discover the joy of learning Bahasa Indonesia with our video call conference feature! Connect with fellow language enthusiasts from around the world in real-time. Whether you're a beginner or looking to polish your skills, engage in lively conversations, practice pronunciation, and exchange cultural insights. Join us today and start your journey to mastering Bahasa Indonesia. Let's learn together!
                     </div>
-                    <div className="flex justify-end pt-16 mr-12">
-                        <Button linkPage="/didiktvcall" title="Let's Go!" type="medium-secondary"/>
+                    <div className="flex justify-end pt-16 mr-12 gap-4">
+                        <Button type="medium-secondary" title="Back" linkPage="/home" />
+                        <Button linkPage='https://meet.google.com/djz-bgpi-eap?authuser=1' title="Let's Go!" type="medium" openInNewTab={true}/>
                     </div>
                 </div>
             </div>

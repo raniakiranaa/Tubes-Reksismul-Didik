@@ -114,13 +114,17 @@
 // }
 
 import React from 'react';
-// import MenuScreen from './didiktvmenu/page';
-import TnCScreen from './didiktvtnc/page';
+import MenuScreen from './didiktvmenu/page';
+// import TnCScreen from './didiktvtnc/page';
 // import VidCallScreen from './didiktvcall/page';
+// import LogInScreen from './login/page';
 
 const Home = () => {
   return (
-    <TnCScreen />
+    // <LogInScreen />
+    // <TnCScreen />
+    <MenuScreen />
+    // <VidCallScreen />
   );
 }
 

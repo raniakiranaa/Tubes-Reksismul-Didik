@@ -86,7 +86,7 @@ const ReadAndSelect = () => {
     return (
         <div className="flex min-h-screen flex-col p-24">
             <ToastContainer />
-            <div className="text-main-text semibold-64 pt-8">Read and Select - Intermediate</div>
+            <div className="text-main-text semibold-64 pt-8">Read and Select - Advanced</div>
             <div className="w-full bg-body-text rounded-full h-3 dark:bg-gray-700 my-8">
                 <div className="bg-positive-2 h-3 rounded-full" style={{ width: `${(taskIndex + 1) / tasks.length * 100}%` }}></div>
             </div>

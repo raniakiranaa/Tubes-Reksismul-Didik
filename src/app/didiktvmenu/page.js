@@ -15,7 +15,7 @@ export default function App() {
                     Discover the joy of learning Bahasa Indonesia with our video call conference feature! Connect with fellow language enthusiasts from around the world in real-time. Whether you're a beginner or looking to polish your skills, engage in lively conversations, practice pronunciation, and exchange cultural insights. Join us today and start your journey to mastering Bahasa Indonesia. Let's learn together!
                     </div>
                     <div className="flex justify-end pt-16 mr-12">
-                        <Button linkPage="/videocall" title="Let's Go!" type="medium-secondary"/>
+                        <Button linkPage="/didiktvcall" title="Let's Go!" type="medium-secondary"/>
                     </div>
                 </div>
             </div>

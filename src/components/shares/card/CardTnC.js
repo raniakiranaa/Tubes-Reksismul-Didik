@@ -35,9 +35,24 @@ import { Card, CardBody, CardFooter, Checkbox } from "@nextui-org/react";
 import { Button } from '@/components/shares/button'
 
 export function CardTnC() {
+  // const [isChecked, setIsChecked] = useState(false);
+
+  // const handleCheckboxChange = (event) => {
+  //   setIsChecked(event.target.checked);
+  // };
+
+  // const handleAcceptClick = () => {
+  //   if (isChecked) {
+  //     // Perform actions when checkbox is checked and "Accept" button is clicked
+  //     console.log("Accept button clicked and checkbox is checked.");
+  //   } else {
+  //     console.log("Checkbox is not checked. Cannot proceed.");
+  //   }
+  // };
+
   return (
-    <Card className="max-w-[1100px] shadow-lg" style={{ borderRadius: '16px' }}>
-      <CardBody className="px-5 text-medium text-default-400 mb-4 overflow-y-auto h-[400px]">
+    <Card className="max-w-[1100px] shadow-lg" style={{ borderRadius: '16px', height: '700px' }}>
+      <CardBody className="px-5 text-medium text-default-400 mb-4 overflow-y-auto h-[570px]">
         <div className="text-sub-text regular-18 p-4 pt-8 text-justify">
           <p>1. Introduction</p>
 
@@ -93,6 +108,7 @@ export function CardTnC() {
       <CardFooter className="gap-3 flex flex-col items-center">
         <div className="flex items-center gap-2 w-full justify-start pl-2"> {/* Ensure text is aligned left */}
           <Checkbox
+            // onChange={(e) => handleCheckboxChange(e.target.checked)}
             defaultSelected={false}
             color="primary"
             style={{
@@ -104,12 +120,13 @@ export function CardTnC() {
               borderRadius: "4px", // Adjust border radius as needed
               marginLeft: "15px",
             }}
+            // checkedStyle={{ backgroundColor: '#172852' }}
           />
           <span className="regular-18 text-justify">I have read and agree to the Terms and Conditions above</span>
         </div>
         <div className="flex justify-center gap-2 w-full pb-8 pt-4"> {/* Center the buttons */}
-          <Button type="small-secondary" title="Decline" linkPage="" />
-          <Button type="small" title="Accept" linkPage="" />
+          <Button type="small-secondary" title="Decline" linkPage="/home" />
+          <Button type="small" title="Accept" linkPage="/didiktvmenu" />
         </div>
       </CardFooter>
     </Card>

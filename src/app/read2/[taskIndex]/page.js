@@ -16,7 +16,7 @@ const ReadAndSelect = () => {
     const [result, setResult] = useState(null);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/tasks')
+        fetch('http://127.0.0.1:8000/api/tasks_read2')
             .then(response => response.json())
             .then(data => {
                 setTasks(data);
@@ -42,7 +42,7 @@ const ReadAndSelect = () => {
     };
 
     const checkWords = async () => {
-        const response = await fetch('http://127.0.0.1:8000/api/check', {
+        const response = await fetch('http://127.0.0.1:8000/api/check_read2', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ taskIndex, selectedWords })
@@ -71,9 +71,9 @@ const ReadAndSelect = () => {
     const handleNextClick = async () => {
         await checkWords();
         if (taskIndex < tasks.length - 1) {
-            window.location.href = `/read/${taskIndex + 1}`;
+            window.location.href = `/read2/${taskIndex + 1}`;
         } else {
-            window.location.href = `/readresult`;
+            window.location.href = `/read2result`;
         }
     };
 
@@ -86,7 +86,7 @@ const ReadAndSelect = () => {
     return (
         <div className="flex min-h-screen flex-col p-24">
             <ToastContainer />
-            <div className="text-main-text semibold-64 pt-8">Read and Select - Beginner</div>
+            <div className="text-main-text semibold-64 pt-8">Read and Select - Intermediate</div>
             <div className="w-full bg-body-text rounded-full h-3 dark:bg-gray-700 my-8">
                 <div className="bg-positive-2 h-3 rounded-full" style={{ width: `${(taskIndex + 1) / tasks.length * 100}%` }}></div>
             </div>
@@ -106,7 +106,7 @@ const ReadAndSelect = () => {
                 <Button linkPage="#" onClick={checkWords} title="Check" type="medium-secondary" />
                 <div className="flex space-x-4">
                     {taskIndex > 0 && (
-                        <Button linkPage={`/read/${taskIndex - 1}`} title="Back" type="medium-secondary" />
+                        <Button linkPage={`/read2/${taskIndex - 1}`} title="Back" type="medium-secondary" />
                     )}
                     {taskIndex < tasks.length - 1 ? (
                         <Button linkPage="#" onClick={handleNextClick} title="Next" type="medium" />

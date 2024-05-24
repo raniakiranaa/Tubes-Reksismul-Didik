@@ -5,7 +5,7 @@ import { Button } from '@/components/shares/button'
 export default function App() {
     return (
         <div className="flex min-h-screen flex-col justify-center items-center p-24">
-            <div className="text-main-text text-center semibold-64 mb-8">Welcome to Read and Select!</div>
+            <div className="text-main-text text-center semibold-64 mb-8">Welcome to Beginner Mode!</div>
             <div className="flex flex-row items-center space-x-16">
                 <div className="w-1/2">
                     <Image src={word} className="rounded-lg h-full" alt="pic" />

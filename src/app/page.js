@@ -1,7 +1,48 @@
-// import Image from "next/image";
-// // import tvmenu from "didiktv/menu"
+import Image from "next/image";
+// import tvmenu from "didiktv/menu"
+import { Button } from '@/components/shares/button'
+// import { BreadCrumb } from "@/components/shares/nav";
+import Link from 'next/link';
+// import { Button } from '@/components/shares/button'
+// import { BreadCrumb } from "@/components/shares/nav";
+import axios from 'axios';
 
-// export default function Home() {
+
+export default function Home() {
+
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      {/* <Link href="/speech">
+        <div className="btn btn-primary">Go to Speech Page</div>
+      </Link> */}
+      {/* <Button title="aaaontext" type="small-secondary"/> */}
+      {/* <Card/> */}
+      {/* <BreadCrumb/> */}
+{/* 
+      <BreadCrumb
+          items={[
+              { label: 'Home', url: '/home' },
+              { label: 'Projects', url: '/projects' },
+              { label: 'Current Page', url: '/current-page' },
+          ]}
+          currentPage="Current Page"
+      /> */}
+      {/* <div className="flex flex-row justify-between"> */}
+        {/* <CardStack title="Talk It Out" description="Experience interactive learning: Listen, record, repeat!" linkPage="/destination" image={talk}/> */}
+        {/* <CardVertical title="Talk It Out" description="Experience interactive learning: Listen, record, repeat!" image={play}/> */}
+
+
+
+      {/* </div> */}
+    </main>
+  );
+}
+
+// import React from 'react';
+// // import MenuScreen from './didiktvmenu/page';
+// import TnCScreen from './didiktvtnc/page';
+
+// const Home = () => {
 //   return (
 //     <main className="flex min-h-screen flex-col items-center justify-between p-24">
 //       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -112,20 +153,3 @@
 //     </main>
 //   );
 // }
-
-import React from 'react';
-import MenuScreen from './didiktvmenu/page';
-// import TnCScreen from './didiktvtnc/page';
-// import VidCallScreen from './didiktvcall/page';
-// import LogInScreen from './login/page';
-
-const Home = () => {
-  return (
-    // <LogInScreen />
-    // <TnCScreen />
-    <MenuScreen />
-    // <VidCallScreen />
-  );
-}
-
-export default Home;

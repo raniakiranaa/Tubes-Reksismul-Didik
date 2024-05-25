@@ -51,6 +51,14 @@ body {
     @apply text-[20px] font-[400];
   }
 
+  .regular-28 {
+    @apply text-[28px] font-[400];
+  }
+
+  .regular-32 {
+    @apply text-[32px] font-[400];
+  }
+
   .medium-16 {
     @apply text-[16px] font-[500];
   }
@@ -65,6 +73,10 @@ body {
   
   .semibold-14 {
     @apply text-[14px] font-[600];
+  }
+
+  .semibold-20 {
+    @apply text-[20px] font-[600];
   }
 
   .semibold-64 {

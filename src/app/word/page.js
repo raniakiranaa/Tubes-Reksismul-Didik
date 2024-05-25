@@ -1,8 +1,9 @@
 "use client"
 
 import Image from 'next/image';
-import img from '/public/images/word/dog.png';
+import img from '/public/images/speech/dog.png';
 import { Button, RoundIconButton } from '@/components/shares/button';
+import sound from '/public/images/speech/sound.svg';
 
 export default function App() {
     const handleSoundClick = () => {
@@ -24,7 +25,7 @@ export default function App() {
                 </div>
                 <div className="flex justify-center flex-col ml-16">
                     <div className="flex flex-row space-x-8">
-                        <RoundIconButton onClick={ handleSoundClick } />
+                        <RoundIconButton image={sound}/>
                         <div className="flex flex-col justify-center">
                             <div className="bold-20 text-main-text">
                                 Anjing
@@ -35,7 +36,7 @@ export default function App() {
                         </div>
                     </div>
                     <div className="flex flex-row mt-8 space-x-8">
-                        <RoundIconButton onClick={ handleSoundClick } />
+                        <RoundIconButton image={sound} onClick={ handleSoundClick } />
                         <div className="flex flex-col justify-center">
                             <div className="bold-20 text-main-text">
                                 Anak Anjing
@@ -46,7 +47,7 @@ export default function App() {
                         </div>
                     </div>
                     <div className="flex flex-row mt-8 space-x-8">
-                        <RoundIconButton onClick={ handleSoundClick } />
+                        <RoundIconButton image={sound} onClick={ handleSoundClick } />
                         <div className="flex flex-col justify-center">
                             <div className="bold-20 text-main-text">
                                 Hewan
@@ -57,7 +58,7 @@ export default function App() {
                         </div>
                     </div>
                     <div className="flex flex-row mt-8 space-x-8">
-                        <RoundIconButton onClick={ handleSoundClick } />
+                        <RoundIconButton image={sound} onClick={ handleSoundClick } />
                         <div className="flex flex-col justify-center">
                             <div className="bold-20 text-main-text">
                                 Hewan Peliharaan
@@ -70,8 +71,8 @@ export default function App() {
                 </div>
             </div>
             <div className="flex flex-row justify-center space-x-4">
-                <Button title="Back" type="medium-secondary"/>
-                <Button title="Next" type="medium"/>
+                <Button linkPage="" title="Back" type="medium-secondary"/>
+                <Button linkPage="" title="Next" type="medium"/>
             </div>
         </div>
     );

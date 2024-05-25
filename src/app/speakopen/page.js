@@ -1,4 +1,4 @@
-import speak from '/public/images/word/speakone.png'
+import speak from '/public/images/speech/speakone.png'
 import Image from 'next/image';
 import { Button } from '@/components/shares/button'
 

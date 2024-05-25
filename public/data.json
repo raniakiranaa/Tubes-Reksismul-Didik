@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "words": "Aku senang bertemu denganmu",
+        "translate" : "I am pleased to meet you",
+        "progress" : "20%"
+    }, 
+    {
+        "id": 2,
+        "words": "Senang sekali bisa berada di sini",
+        "translate": "Glad to be here",
+        "progress" : "40%"
+    },
+    {
+        "id": 3,
+        "words": "Saya sangat antusias untuk berdiskusi",
+        "translate": "I am excited to discuss with you",
+        "progress" : "60%"
+    },
+    {
+        "id": 4,
+        "words": "Saya berharap kita semua bisa belajar banyak",
+        "translate": "I hope we can all learn a lot",
+        "progress" : "80%"
+    },
+    {
+        "id": 5,
+        "words": "Halo saya harap Anda baik-baik saja",
+        "translate": "Halo I hope you are doing fine",
+        "progress" : "100%"
+    }
+]

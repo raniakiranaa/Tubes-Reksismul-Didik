@@ -10,16 +10,22 @@
   },
   "dependencies": {
     "@google-apps/meet": "^0.3.0",
-    "@google-cloud/speech": "^6.5.0",
+    "@google-cloud/speech": "^6.6.0",
+    "@google-cloud/storage": "^7.11.1",
     "@google-cloud/text-to-speech": "^5.2.0",
     "@nextui-org/react": "^2.3.6",
     "@react-oauth/google": "^0.12.1",
+    "axios": "^1.7.2",
     "gapi-script": "^1.2.0",
     "googleapis": "^137.1.0",
     "next": "14.2.3",
     "next-navigation": "^1.0.6",
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "^18.3.1",
+    "react-dom": "^18",
+    "react-media-recorder": "^1.6.6",
+    "react-toastify": "^10.0.5",
+    "recordrtc": "^5.6.2",
+    "wavefile": "^11.0.0"
   },
   "devDependencies": {
     "eslint": "^8",

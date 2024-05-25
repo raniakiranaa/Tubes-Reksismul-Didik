@@ -30,6 +30,10 @@ export const Button = (props) => {
         custom = "bg-transparent text-blue-2 medium-32 py-4 px-8 border border-blue-2"
         arrowCust = "fill-blue-2"
         size = "w-16"
+    } else if (props.type === "disabled") {
+        custom = "bg-body-text text-sub-text py-4 px-6 medium-24 cursor-not-allowed opacity-50"
+        arrowCust = "fill-blue-2"
+        size = "w-12"
     }
 
     const linkProps = {
